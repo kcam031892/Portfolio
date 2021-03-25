@@ -10,6 +10,11 @@ body {
 a {
   text-decoration: none;
 }
+h1,
+h2,
+h3 {
+  font-family: $fontRoboto;
+}
 p {
   margin: 0.5rem 0 0.25rem;
 }
@@ -19,8 +24,7 @@ ul {
   }
 }
 section {
-  padding: 1rem;
-  overflow: hidden;
+  padding: 4.375rem 0;
 }
 .container {
   max-width: 1100px;
@@ -28,18 +32,36 @@ section {
   padding: 0 2rem;
   overflow: hidden;
 }
+.text-primary {
+  color: $primaryColor;
+}
 .text-secondary {
   color: $secondaryColor;
 }
 
+.section-title {
+  font-size: 2.25rem;
+}
 .btn {
   display: inline-block;
   color: #fff;
   padding: 0.5rem 3rem;
+  transition: all 0.3s ease-out;
   &-primary {
     background-color: $accentColor;
   }
   &:hover {
-    transform: scale(0.9);
+    transform: scale(1.1);
+  }
+}
+.bg {
+  &-primary {
+    background-color: #2b2e4a;
+  }
+  &-secondary {
+    background-color: $secondaryColor;
+  }
+  &-danger {
+    background-color: $accentColor;
   }
 }

@@ -1,5 +1,5 @@
 .hero {
-  background: linear-gradient(45deg, #081537, #0c132b, #212339);
+  background: linear-gradient(45deg, #081537 0%, #0c132b 45%, #212339 100%);
   position: relative;
   width: 100%;
   height: 100vh;
@@ -12,11 +12,8 @@
     position: absolute;
     bottom: 0;
     right: 200px;
-    height: 80%;
+    height: 78%;
     z-index: 20;
-    @include breakpoint(mobile) {
-      display: none;
-    }
   }
   &__content {
     position: relative;
@@ -35,14 +32,6 @@
     }
     .btn {
       box-shadow: 4px 6px 8px #441922;
-    }
-
-    @include breakpoint(mobile) {
-      left: 0;
-      max-width: 100vw;
-      h1 {
-        font-size: 1.5rem;
-      }
     }
   }
 }

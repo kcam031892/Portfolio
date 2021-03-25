@@ -1,0 +1,24 @@
+.skills {
+  background-color: $darkBlue;
+  color: $lightColor;
+  .grid {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+
+    .item {
+      text-align: center;
+      padding: 0.5rem 1rem;
+      border-radius: rem(28);
+      cursor: pointer;
+      &:hover {
+        transform: scale(0.9);
+      }
+      h3 {
+        font-size: 1rem;
+        font-family: $fontRaleway;
+      }
+    }
+  }
+}

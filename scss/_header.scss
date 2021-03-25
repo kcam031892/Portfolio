@@ -7,13 +7,9 @@
   z-index: 25;
   &__title {
     padding: 1rem 0;
-
     h1 {
       color: $lightColor;
       font-size: 2.25rem;
-      @include breakpoint(mobile) {
-        font-size: 1.5rem;
-      }
     }
   }
   & > .container {
@@ -25,7 +21,6 @@
   }
   .toggle-bar {
     cursor: pointer;
-
     span {
       display: block;
       height: 3px;
@@ -36,7 +31,12 @@
       }
     }
     &.active {
+      position: fixed;
+      right: 150px;
       span {
+        &:not(:first-child) {
+          display: none;
+        }
         position: relative;
         display: inline-block;
         width: 30px;
@@ -44,9 +44,6 @@
         overflow: hidden;
         background-color: transparent;
         margin-top: 0.5rem;
-        &:not(:first-child) {
-          display: none;
-        }
         &::before,
         &::after {
           content: '';
@@ -68,18 +65,22 @@
     }
   }
   .nav {
-    display: none;
+    position: fixed;
+    left: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+    height: 100vh;
+    background-color: $primaryColor;
+
     &.active {
-      display: flex;
-      position: fixed;
       left: 0;
-      top: 0;
-      width: 100%;
-      height: 100vh;
-      background-color: $primaryColor;
+
       z-index: 30;
-      justify-content: center;
-      align-items: center;
+      transition: all 0.2s ease-in-out;
     }
     &__list {
       position: relative;
@@ -95,6 +96,8 @@
       color: $lightColor;
       font-size: 2rem;
       text-align: center;
+      font-weight: map-get($fontWeight, bold);
+
       &:hover {
         color: $secondaryColor;
       }
@@ -111,19 +114,18 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    transition: all 0.2s ease-in-out;
+
     z-index: 35;
 
     i {
       color: $lightColor;
       font-size: 1.5rem;
+      transition: all 0.2s ease-in-out;
       &:hover {
         transform: scale(1.5);
       }
     }
-    @include breakpoint(mobile) {
-      display: none;
-    }
+
     &.active {
       position: fixed;
     }

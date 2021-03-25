@@ -1,0 +1,10 @@
+.footer {
+  padding: rem(40);
+  background-color: #000;
+  color: $lightColor;
+  h3 {
+    text-align: center;
+    font-family: $fontRaleway;
+    font-weight: map-get($fontWeight, regular);
+  }
+}
