@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.3;
+}
+a {
+  text-decoration: none;
+}
+p {
+  margin: 0.5rem 0 0.25rem;
+}
+ul {
+  li {
+    list-style: none;
+  }
+}
+section {
+  padding: 1rem;
+  overflow: hidden;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+.text-secondary {
+  color: $secondaryColor;
+}
+
+.btn {
+  display: inline-block;
+  color: #fff;
+  padding: 0.5rem 3rem;
+  &-primary {
+    background-color: $accentColor;
+  }
+  &:hover {
+    transform: scale(0.9);
+  }
+}
